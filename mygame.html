@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dinah</title>
+	<link rel="stylesheet" href="mygame.css">
+</head>
+
+<body>
+	<div class="button-container fixed-buttons">
+		<button class="settings" onclick="settingsClicked()">Settings</button>
+		<button class="home" onclick="home()">home</button>
+		<button class="menu" onclick="menuClicked()">menu</button>
+	</div>
+
+	<div id="corner-popup">
+		<div id="settings-corner-popup">
+			<table>
+				<caption>dinah >> settings</caption>
+				<tr>
+					<td><span class="span1">play as</span><span class="span2"><button id="playAsWhite"
+								onclick="playAsWhite()">white</button> <button id="playAsBlack" onclick="playAsBlack()">black</button>
+							<button id="playByTurns" onclick="playByTurns()">by turns</button></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">sound</span><span class="span2"><button id="soundOn"
+								onclick="colorSoundBtnOn()">on</button> <button id="soundOff"
+								onclick="colorSoundBtnOff()">off</button></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">theme</span><span class="span2"><input id="userColorChoice" type="color"></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">show green buttons</span><span class="span2"><button id="showGreenBtnsOn"
+								onclick="colorShowGreenBtnsOn()">on</button> <button id="showGreenBtnsOff"
+								onclick="colorShowGreenBtnsOff()">off</button></span></td>
+				</tr>
+				<tr>
+					<td class="grid-setting-btn"><span><button>restart</button></span> <span><button>undo</button></span></td>
+				</tr>
+			</table>
+			<table class="support">
+				<tr>
+					<td><a href="https//flutterWaveCrowdFundingAccountLink.com">support us</a></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="menu-corner-popup">
+			<table>
+				<caption>dinah &gt;&gt; menu</caption>
+				<tr>
+					<td><span class="span1">tutorial</span><span class="span2"><a
+								href="https//www.externalResourceStorelikeFacebookPage.com"><button>click</button></a></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">share rank</span><span class="span2"><button>click</button></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">share app</span><span class="span2"><button>click</button></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">terms of use</span><span class="span2"><a
+								href="https//www.externalResourceStorelikeFacebookPage.com"><button>click</button></a></span></td>
+				</tr>
+				<tr>
+					<td><span class="span1">questions/feedback</span><span class="span2"><button>contact us</button></span></td>
+				</tr>
+			</table>
+
+			<table class="support">
+				<tr>
+					<td><a href="https//flutterWaveCrowdFundingAccountLink.com">support us</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<div class="grid"></div>
+
+	<!--main menu-->
+	<div class="main-menu">
+
+		<div class="main-header">
+			<table class="level-menu">
+				<tr>
+					<td><span class="span1">Ai knowledge</span><span class="span2">40 din</span></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="button-container">
+			<button class="squircle-button-big" onclick="twoPlayersGame()">Two Players</button><button
+				class="squircle-button-big" onclick="level1Clicked()">playWithAi</button>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+			for (var i = 1; i <= 9; i++) {
+				console.log(47)
+				var i = i.toString()
+				var grids = document.getElementsByClassName("grid")
+				var grid = grids[0]
+				var div = document.createElement("div")
+				div.setAttribute("class", "circle")
+				div.setAttribute("id", "btn" + i)
+				var button = document.createElement("button")
+				button.setAttribute("class", "box")
+				button.setAttribute("onclick", "btn" + i + "clicked()")
+				button.appendChild(div)
+				grid.appendChild(button)
+			}
+		})
+	</script>
+	<script src="mygame.js"></script>
+</body>
+
+</html>
